@@ -1,0 +1,15 @@
+# Mac
+.DS_Store
+
+dist
+build
+
+#Node
+node_modules
+
+#npm
+npm-debug.log
+
+# lock files
+.~*#
+
