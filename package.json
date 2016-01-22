@@ -32,6 +32,7 @@
   "dependencies": {
     "admin-lte": "https://github.com/Innovisite/AdminLTE.git#dev",
     "event-stream": "^3.3.2",
+    "express": "^4.13.4",
     "gh-release": "^2.0.2",
     "leaflet": "^0.7.7",
     "papaparse": "^4.1.2"
