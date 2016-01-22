@@ -7,6 +7,14 @@
   color:#dd4b39;
  }
 
+.logo>img {
+  height: 40px;
+}
+
+.logo-mini>img{
+  height:40px;
+}
+
 .daterangepicker.dropdown-menu {
   z-index: 13;
 }
