@@ -47,6 +47,9 @@
 			   }
 			   rows.pop();
 			   $("#example1").DataTable({
+			       language: {
+				   url: "assets/datatables/French.json"
+			       },
 			       data: rows,
 			       columns: cdata 
 			   });
