@@ -47,9 +47,10 @@ var jsSources = [ adminlteRoot + 'node_modules/moment/moment.js',
 		  adminlteRoot + 'plugins/fastclick/fastclick.js',
 		  'node_modules/papaparse/papaparse.js',
 		  'node_modules/leaflet/dist/leaflet.js',
+		  'node_modules/angular-leaflet-directive/dist/angular-leaflet-directive.js',
 		  adminlteRoot + 'dist/js/app.js',
 		  "app/app.js",
-		  "app/components/csvprocess/csvprocessController.js",
+		  "app/components/csvprocess/*.js",
 		  "lib/js/*.js" ];
 
 mkdirp('wwwroot/build/fonts');
@@ -105,7 +106,7 @@ gulp.task('prepare-js-release', function() {
 });
 
 gulp.task('prepare-html', function() {
-    return gulp.src([ "app/components/csvprocess/csvprocessView.html" ])
+    return gulp.src([ "app/components/csvprocess/*.html" ])
 	.pipe(duration('Execution Time: '))
 	.pipe(gulp.dest('wwwroot/build/html/'));
 });
