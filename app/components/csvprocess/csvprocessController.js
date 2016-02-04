@@ -62,12 +62,17 @@
 						  $scope.data.markers = {};
 						  var markers = {};
 						  for(var i = 0; i < rows.length; ++i) {
-						      var key = rows[i].PDL;
-						      var msgStr = "<georef-edf-data elt='data.rows[" + i + "]'></georef-edf-data>";
+						      var elt = rows[i];
+						      var key = elt.PDL;
+						      var msgStr = "<georef-edf-data></georef-edf-data>";
 						      markers[key] = {
 							  lat: parseFloat(rows[i].georef_lat),
 							  lng: parseFloat(rows[i].georef_lon),
-							  getMessageScope: function() { return $scope; },
+							  getMessageScope: function() { 
+							      var infoScope = $scope.$new(true);
+							      infoScope.elt = elt;
+							      return infoScope; 
+							  },
 							  compileMessage: true,
 							  message: msgStr
 						      };
