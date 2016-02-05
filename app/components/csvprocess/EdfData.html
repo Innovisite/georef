@@ -1,9 +1,28 @@
 <div class="edf">
-<h3>Compteur EDF {{elt.PDL}}</h3>
-<ul>
-<li>Tarif: {{elt.tarif}}</li>
-<li>Contrat: {{elt["ref contrat"]}}</li>
-<li>Adresse: {{elt.georef_label}}</li>
-</ul>
-</div>
+    <div class="row">
+        <img src="assets/img/edf_icon.png" class="col-md-2 col-xs-2" alt="edf logo"/>
+        <h4 class="col-md-9 col-xs-9">Compteur EDF</h4>
+    </div>
 
+    <div class="edf-data">
+        <div class="row">
+            <span class="col-md-3">Adresse</span>
+            <p class="col-md-9">{{elt.georef_label}}</p>
+        </div>
+
+        <div class="row">
+            <span class="col-md-3">PDL</span>
+            <p class="col-md-9">{{elt.PDL}}</span>
+        </div>
+
+        <div class="row">
+            <span class="col-md-3">Tarif</span>
+            <p class="col-md-9">{{elt.tarif}} </span>
+        </div>
+
+        <div class="row">
+            <span class="col-md-3">Contrat</span>
+            <p class="col-md-9">{{elt["ref contrat"]}} </span>
+        </div>
+    </div>
+</div>
